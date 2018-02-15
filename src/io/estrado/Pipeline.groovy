@@ -101,7 +101,7 @@ def containerBuildPub(Map args) {
         for (int i = 0; i < args.tags.size(); i++) {
             //img.push(args.tags.get(i))
             tag = args.tags.get(i)
-            sh "docker push ${args.acct}/${args.repo}+':'+ tag"
+            sh "docker push ${args.acct}/${args.repo}:${tag}"
         }
 
         return img.id
